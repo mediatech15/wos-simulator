@@ -2494,5 +2494,17 @@
             "Lethality": 44,
             "Health": 57
         }
+    },
+    "bear_infantry": {
+        "id": "bear_infantry",
+        "type": "infantry",
+        "tier": 10,
+        "fc": 0,
+        "stats": {
+            "Attack": 10,
+            "Defense": 83.3,
+            "Lethality": 10,
+            "Health": 10
+        }
     }
 }

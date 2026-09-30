@@ -1,10 +1,11 @@
 import json
+
+from Base_classes.BattleRound import BattleRound
 from Base_classes.Fight import Fight
 from Base_classes.Fighter import Fighter
-from Base_classes.StatsBonus import StatsBonus
-from Base_classes.BattleRound import BattleRound
-from Base_classes.UnitType import UnitType
 from Base_classes.JsonUtil import JsonUtil
+from Base_classes.StatsBonus import StatsBonus
+from Base_classes.UnitType import UnitType
 
 ###############################################
 # LOAD FIGHTERS DATA
@@ -34,14 +35,15 @@ attacker = Fighter(attacker_name)
 # }
 
 attacker.troops = {
-    "infantry_t10_fc5" : 50000,
-    "lancer_t10_fc5" : 0,
-    "marksman_t10_fc5" : 0
+    # "infantry_t10_fc3" : 50000,
+    # "lancer_t10_fc3" : 50000,
+    # "marksman_t10_fc3" : 50000
+    "bear_infantry": 5000
 }
 
 ### Add heroes stats. # If this is used, hero stats are added. All heroes stats should be specified in 'fighters_heroes.json'
 ### Use only if heroes stats are not included in fighters_data/fighter_stats.json
-# attacker.add_heroes_stats()           
+# attacker.add_heroes_stats()
 
 
 # attacker.joiner_heroes = ['Jessie', 'Jasser', 'mOLLY', "mia"]   ## If this form is used, all joiners first skill are considered at level 5
@@ -50,31 +52,29 @@ attacker.troops = {
 # DEFENDER DATA
 ###############################################
 
-defender = Fighter("Beast_30")
+defender = Fighter("Raging_Bear")
 
-# defender.heroes = ["Hector"] # ["Flint", "Patrick", "Seo-yoon"]     
+# defender.heroes = ["Hector"] # ["Flint", "Patrick", "Seo-yoon"]
 
 defender.troops = {
-    "infantry_t10"   : 6450,
-    "lancer_t10"     : 7525,
-    "lancer_t9"      : 30105,
-    "marksman_t10"   : 7525,
-    "marksman_t9"    : 30105
-	
+    "infantry_t10_fc5" : 50000,
+    "lancer_t10_fc5" : 50000,
+    "marksman_t10_fc5" : 50000
+    # "bear_infantry"  : 5000
 }
 
 
-# defender.add_heroes_stats()           
+# defender.add_heroes_stats()
 
-# defender.joiner_heroes = ['Jessie', 'Jasser', 'Molly', "mia"]   
+# defender.joiner_heroes = ['Jessie', 'Jasser', 'Molly', "mia"]
 
 
 ###############################################
 ### BATTLE & Print results
 ###############################################
 
-BattleRound.DEBUG = True
-f = Fight(attacker, defender)
+BattleRound.DEBUG = False
+f = Fight(attacker, defender, max_round=9)
 f.battle(show_rounds_freq = 1)
 
 f.format_report()

@@ -1,10 +1,10 @@
 {
-    "time": "2025-07-22 - 06:39",
+    "time": "2026-03-26 - 16:22",
     "attacker": {
         "name": "Nitro",
         "heroes": {},
         "troops": {
-            "infantry_t10_fc5": 50000
+            "bear_infantry": 5000
         },
         "stats": {
             "inf": {
@@ -29,14 +29,12 @@
         "joiner_heroes": {}
     },
     "defender": {
-        "name": "Beast_30",
+        "name": "Raging_Bear",
         "heroes": {},
         "troops": {
-            "infantry_t10": 6450,
-            "lancer_t10": 7525,
-            "lancer_t9": 30105,
-            "marksman_t10": 7525,
-            "marksman_t9": 30105
+            "infantry_t10_fc5": 50000,
+            "lancer_t10_fc5": 50000,
+            "marksman_t10_fc5": 50000
         },
         "stats": {
             "inf": {
@@ -62,20 +60,16 @@
     },
     "sim_result": {
         "attacker": 0,
-        "defender": 41906
+        "defender": 150000
     },
-    "sim_rounds": 96,
+    "sim_rounds": 1,
     "sim_skills_used": {
         "attacker": [
-            "INFANTRY- Master Brawler/1 (Lvl 1)      :  1 (67)               (DamageUp)",
-            "INFANTRY- Bands of Steel/1 (Lvl 1)      :  1 (96)               (DefenseUp)",
-            "INFANTRY- Crystal Shield/1 (Lvl 2)      :  75 (75)              (OppDamageDown)"
+            "INFANTRY- Bands of Steel/1 (Lvl 1)      :  1 (1)                (DefenseUp)"
         ],
         "defender": [
             "INFANTRY- Bands of Steel/1 (Lvl 1)      :  1 (0)                (DefenseUp)",
-            "LANCERS- Ambusher/1 (Lvl 1)             :  17 (17)              (attack_order)",
-            "MARKSMEN- Ranged Strike/1 (Lvl 1)       :  1 (96)               (DamageUp)",
-            "MARKSMEN- Volley/1 (Lvl 1)              :  8 (8) -Extra: 2786.7 (DamageUp)"
+            "MARKSMEN- Ranged Strike/1 (Lvl 1)       :  1 (1)                (DamageUp)"
         ]
     }
 }
